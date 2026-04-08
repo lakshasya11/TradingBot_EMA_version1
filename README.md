@@ -54,7 +54,7 @@ All 4 conditions must be true on the current candle:
 - Fixed at **$10 USD** profit (converted to price distance based on volume and tick value)
 
 ### Breakeven
-- Once the trade reaches **+$5 USD** profit, stop loss is moved to entry price (breakeven)
+- Once the trade reaches **+$3 USD** profit, stop loss is moved to entry price (breakeven)
 
 ### Trailing Stop
 - After breakeven is set, a trailing stop trails **$2 USD** behind the current price

@@ -167,9 +167,9 @@ class TripleConfirmationBot:
             entry_price = tick.ask if direction == "BUY" else tick.bid
             stop_loss = self.calculate_atr_stop_loss(direction, entry_price)
             
-            # Take profit at 2:1 risk reward
-            risk = abs(entry_price - stop_loss)
-            take_profit = entry_price + (risk * 2) if direction == "BUY" else entry_price - (risk * 2)
+            # Take profit at 10.0 points distance
+            tp_distance = 10.0
+            take_profit = entry_price + tp_distance if direction == "BUY" else entry_price - tp_distance
             
             symbol_info = mt5.symbol_info(self.symbol)
             if not symbol_info:

@@ -48,6 +48,10 @@ def diagnostic_check():
     print(f"EMA 21: {ema21:.5f}")
     print(f"EMA Trend: {'BULLISH' if ema9 > ema21 else 'BEARISH'}")
     
+    # Check EMA Angle
+    ema_angle = analysis.get('ema_angle')
+    print(f"EMA 9 Angle: {ema_angle:.2f}°")
+    
     # Check SuperTrend (10, 0.9)
     st_val = analysis.get('supertrend_value')
     st_dir = analysis.get('supertrend_direction')
